@@ -12,7 +12,7 @@
   {% include 'includes/navigation.html' %}
 
   <header class="header-2">
-    <div class="page-header min-vh-75 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/gato.jpg')">
+    <div class="page-header min-vh-75 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/perro3.jpg')">
       <span class="mask bg-gradient-success opacity-4"></span>
       <div class="container">
         <div class="row justify-content-center">
@@ -26,7 +26,7 @@
   </header>
     <!-- END Section with four info areas left & one card right with image and waves -->
     <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
-    <section class="pb-5 position-relative bg-gradient-dark mx-n3">
+    <section class="pb-5 position-relative bg-gradient-white mx-n3">
       <div class="container">
         <div class="row">
           <div class="col-md-8 text-start mb-5 mt-5">
@@ -34,17 +34,17 @@
         </div>
         <div class="row">
           <div class="col-lg-6 col-12">
-            <div class="card card-profile mt-4">
+            <div class="card card-profile bg-gradient-success">
               <div class="row">
                 <div class="col-lg-4 col-md-6 col-12 mt-n5">
                   <a href="javascript:;">
                     <div class="p-3 pe-md-0">
-                      <img class="w-100 border-radius-md shadow-lg" src="{{ ASSETS_ROOT }}/img/team-5.jpg" alt="image">
+                      <img class="w-100 border-radius-md shadow-lg" src="{{ ASSETS_ROOT }}/img/diego.jpeg" alt="image">
                     </div>
                   </a>
                 </div>
                 <div class="col-lg-8 col-md-6 col-12 my-auto">
-                  <div class="card-body ps-lg-0">
+                  <div class="card-body bg-gradient-success ps-lg-0">
                     <h5 class="mb-0">Diego Riveros</h5>
                     <h6 class="text-info">Estudiante de Ingeniería (Ñuñoa)</h6>
                     <p class="mb-0">"No hay nada mejor que la compañia incondicional de los perros"</p>
@@ -59,7 +59,7 @@
                 <div class="col-lg-4 col-md-6 col-12 mt-n5">
                   <a href="javascript:;">
                     <div class="p-3 pe-md-0">
-                      <img class="w-100 border-radius-md shadow-lg" src="{{ ASSETS_ROOT }}/img/bruce-mars.jpg" alt="image">
+                      <img class="w-100 border-radius-md shadow-lg" src="{{ ASSETS_ROOT }}/img/germán.jpeg" alt="image">
                     </div>
                   </a>
                 </div>
@@ -67,7 +67,7 @@
                   <div class="card-body ps-lg-0">
                     <h5 class="mb-0">Germán Silva </h5>
                     <h6 class="text-info">Estudiante de Ingeniería (Las Condes)</h6>
-                    <p class="mb-0">"Me encanta poder recibir y conocer distintos perros, además le hacen compañia y juegan con mi perro Lucas"</p>
+                    <p class="mb-0">"Me encanta poder recibir y conocer distintos perros"</p>
                   </div>
                 </div>
               </div>
@@ -160,37 +160,45 @@
         </div>
       </div>
     </section>
-     --><!-- -------- START PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
-    <section class="my-5 pt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 m-auto">
-            <h4>Be the first to see the news</h4>
-            <p class="mb-4">
-              Your company may not be in the software business,
-              but eventually, a software company will be in your business.
-            </p>
-            <div class="row">
-              <div class="col-8">
-                <div class="input-group input-group-outline">
-                  <label class="form-label">Email Here...</label>
-                  <input type="text" class="form-control mb-sm-0">
-                </div>
-              </div>
-              <div class="col-4 ps-0">
-                <button type="button" class="btn bg-gradient-info mb-0 h-100 position-relative z-index-2">Subscribe</button>
-              </div>
-            </div>
+ -------- START Features w/ icons and text on left & gradient title and text on right -------- -->
+<section class="py-9">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 my-auto">
+        <h3>¿Cómo los seleccionamos?</h3>
+        <p class="pe-5">Cómo tambien somos unos petlovers de nuestras mascotas, sabemos lo importante que es dejar a nuestros peludos en buenas manos. Es por esto que tenemos un cauto proceso de selección, el cúal cuenta con las siguientes 3 etapas. </p>
+      </div>
+      <div class="col-lg-6 mt-lg-0 mt-5 ps-lg-0 ps-0">
+        <div class="p-3 info-horizontal">
+          <div class="icon icon-shape  bg-gradient-success shadow-primary text-center">
+            <i class="fas fa-file opacity-10"></i>
           </div>
-          <div class="col-md-5 ms-auto">
-            <div class="position-relative">
-              <img class="max-width-50 w-100 position-relative z-index-2" src="{{ ASSETS_ROOT }}/img/macbook.png" alt="image">
-            </div>
+          <div class="description ps-3">
+            <p class="mb-0">1. Revisión de CV del postulante a cuidador.<br>Se busca que la persona cumpla con el perfil de un petlover.</p>
+          </div>
+        </div>
+
+        <div class="p-3 info-horizontal">
+          <div class="icon icon-shape  bg-gradient-success shadow-primary text-center">
+            <i class="fas fa-chalkboard-teacher opacity-10"></i>
+          </div>
+          <div class="description ps-3">
+            <p class="mb-0">2. Quienes son seleccionados pasan a una entrevista.<br>Se busca conocer en mayor detalle al postulante.</p>
+          </div>
+        </div>
+        <div class="p-3 info-horizontal">
+          <div class="icon icon-shape  bg-gradient-success shadow-primary text-center">
+            <i class="fas fa-video opacity-10"></i>
+          </div>
+          <div class="description ps-3">
+            <p class="mb-0">3. A los elegidos se les solicita un video mostrando su hogar, <br> con el fin de verificar la capacidad y calidad del espacio donde recibirá a nuestras mascotas.</p>
           </div>
         </div>
       </div>
-    </section>
-    <!-- -------- END PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
+    </div>
+  </div>
+</section>
+<!-- -------- END Features w/ icons and text on left & gradient title and text on right -------- -->
   </div>
 
 {% endblock content %}
