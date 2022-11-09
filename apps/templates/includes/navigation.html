@@ -4,6 +4,7 @@
       <div class="col-12">
         <nav class="navbar navbar-expand-lg  blur border-radius-xl mt-4 top-0 z-index-3 shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
           <div class="container-fluid px-0">
+            <img src="{{ ASSETS_ROOT }}/img/SafeBud.png" height="40" width="40" >
             <a class="navbar-brand font-weight-bolder ms-sm-3" href="/" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom">
               SafeBud
             </a>
@@ -27,6 +28,9 @@
                       <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
                         SafeBud
                       </h6>
+                       <a href="/index.html" class="dropdown-item border-radius-md">
+                        <span>Inicio</span>
+                      </a>
                        <a href="/quienes-somos.html" class="dropdown-item border-radius-md">
                         <span>Quiénes somos</span>
                       </a>
@@ -40,7 +44,7 @@
                         <span>Preguntas frecuentes</span>
                       </a>
                       <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
-                        Se parte del equipo 
+                        Sé parte del equipo 
                       </h6>
                       <a href="/trabaja-con-nosotros.html" class="dropdown-item border-radius-md">
                         <span>Trabaja como paseador</span>
@@ -52,6 +56,9 @@
                       <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
                        SafeBud
                       </h6>
+                      <a href="/index.html" class="dropdown-item border-radius-md">
+                        <span>Inicio</span>
+                      </a>
                        <a href="/quienes-somos.html" class="dropdown-item border-radius-md">
                         <span>Quiénes somos</span>
                       </a>
@@ -67,45 +74,6 @@
                     </div>
                   </div>
                 </li>
-              
-                <li class="nav-item dropdown dropdown-hover mx-2">
-                  <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="material-icons opacity-6 me-2 text-md">article</i>
-                    Ayuda
-                    <img src="{{ ASSETS_ROOT }}/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-auto ms-md-2">
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-animation dropdown-md dropdown-md-responsive mt-0 mt-lg-3 p-3 border-radius-lg" aria-labelledby="dropdownMenuDocs">
-                    <div class="d-none d-lg-block">
-                      <ul class="list-group">
-                        <li class="nav-item list-group-item border-0 p-0">
-                          <a class="dropdown-item py-2 ps-3 border-radius-md" target="_blank" href="https://appseed.us/support">
-                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Soporte</h6>
-                            <span class="text-sm">Obtén nuestra ayuda (Whatsapp o mail)</span>
-                          </a>
-                        </li>
-                        <li class="nav-item list-group-item border-0 p-0">
-                          <a class="dropdown-item py-2 ps-3 border-radius-md" target="_blank" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit?AFFILIATE=128200">
-                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">FAQ</h6>
-                            <span class="text-sm">Revisa las dudas más comunes de usuarios nuevos de SafeBud</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="row d-lg-none">
-                      <div class="col-md-12 g-0">
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" target="_blank" href="https://appseed.us/support">
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">Soporte</h6>
-                          <span class="text-sm">Obtén nuestra ayuda (Whatsapp o mail)</span>
-                        </a>
-                        <a class="dropdown-item py-2 ps-3 border-radius-md" target="_blank" href="https://www.creative-tim.com/learning-lab/bootstrap/overview/material-kit?AFFILIATE=128200">
-                          <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">FAQ</h6>
-                          <span class="text-sm">Revisa las dudas más comunes de usuarios nuevos de SafeBud</span>
-                        </a>
-                      </div>
-                    </div>
-                  </ul>
-                </li>
-
                 {% if request.user.is_authenticated %}
                   <li class="nav-item ms-lg-auto">
                     <a class="nav-link nav-link-icon me-2" 
