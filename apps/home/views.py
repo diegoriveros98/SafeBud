@@ -8,6 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
+from .models import *
 
 
 def index(request):
@@ -38,3 +39,15 @@ def pages(request):
     except:
         html_template = loader.get_template('home/page-500.html')
         return HttpResponse(html_template.render(context, request))
+
+def trabajapaseador(request):
+    context = {}
+    nombre = request.POST['nombre']
+    correo = request.POST['correo']
+    mensaje = request.POST['mensaje']
+    
+    consulta = Cliente(nombre=nombre,correo=correo,mensaje=mensaje)
+    consulta.save()
+    
+    html_template = loader.get_template('home/paseadores.html')
+    return HttpResponse(html_template.render(context, request))
