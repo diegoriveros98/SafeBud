@@ -45,6 +45,11 @@ def pages(request):
         html_template = loader.get_template('home/page-500.html')
         return HttpResponse(html_template.render(context, request))
 
+def handle_uploaded_file(f):  
+    with open('apps/static/upload/'+f.name, 'wb+') as destination:  
+        for chunk in f.chunks():  
+            destination.write(chunk) 
+
 def trabajapaseador(request):
     context = {}
     nombres = request.POST['nombres']
@@ -53,6 +58,7 @@ def trabajapaseador(request):
     nacimiento = request.POST['nacimiento'] 
     mensaje = request.POST['mensaje']
     cv = request.FILES['cv']
+    handle_uploaded_file(request.FILES['cv']) 
     
     consulta = PostuladorPaseo(nombres=nombres,apellidos=apellidos,correo=correo,nacimiento=nacimiento,mensaje=mensaje,cv=cv)
     consulta.save()
