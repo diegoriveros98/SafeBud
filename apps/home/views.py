@@ -7,6 +7,7 @@ from django import template
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
+from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse
 from .models import *
 
@@ -51,3 +52,8 @@ def trabajapaseador(request):
     
     html_template = loader.get_template('home/paseadores.html')
     return HttpResponse(html_template.render(context, request))
+
+def logoutView(request):
+    logout(request)
+    html_template = loader.get_template('home/index.html')
+    return HttpResponse(html_template.render({}, request))
