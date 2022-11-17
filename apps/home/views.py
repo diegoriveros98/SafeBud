@@ -10,6 +10,10 @@ from django.template import loader
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse
 from .models import *
+from django.shortcuts import render
+
+# Imaginary function to handle an uploaded file.
+#from somewhere import handle_uploaded_file
 
 
 def index(request):
@@ -43,11 +47,14 @@ def pages(request):
 
 def trabajapaseador(request):
     context = {}
-    nombre = request.POST['nombre']
+    nombres = request.POST['nombres']
+    apellidos = request.POST['apellidos']
     correo = request.POST['correo']
+    nacimiento = request.POST['nacimiento'] 
     mensaje = request.POST['mensaje']
+    cv = request.FILES['cv']
     
-    consulta = Cliente(nombre=nombre,correo=correo,mensaje=mensaje)
+    consulta = PostuladorPaseo(nombres=nombres,apellidos=apellidos,correo=correo,nacimiento=nacimiento,mensaje=mensaje,cv=cv)
     consulta.save()
     
     html_template = loader.get_template('home/paseadores.html')

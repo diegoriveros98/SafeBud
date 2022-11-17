@@ -7,9 +7,12 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-class Cliente(models.Model):
-	nombre=models.CharField(max_length=30)
+class PostuladorPaseo(models.Model):
+	nombres=models.CharField(max_length=30)
+	apellidos=models.CharField(max_length=30)
 	correo=models.CharField(max_length=30)
+	nacimiento = models.DateField()
 	mensaje=models.CharField(max_length=1000)
+	cv=models.FileField()
 	def __str__(self):
-		return self.nombre
+		return self.nombres
